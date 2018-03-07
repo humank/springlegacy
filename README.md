@@ -1,6 +1,21 @@
 # springlegacy
 This application was generated using JHipster 4.14.1, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.14.1](http://www.jhipster.tech/documentation-archive/v4.14.1).
 
+## Integrate with aws-serverless-java-container
+By using the aws-serverless-java-container wrapper library, you can easily intercept all the incoming web traffic in to API Gateway.
+And the best practice is bind a lambda function with proxy integration mode onto API Gateway. 
+
+All the incoming traffic will first be received by APIG and then delegate to your legacy spring controller.
+
+### Integration Steps 
+
+1. Add Maven dependency
+2. Add StreamLambdaHandler
+3. Run all unit test
+4. Write a SAM file to do the deployment
+5. Migrate the front-end web site to s3-static web hosting site
+6. Run full integration test
+
 ## Development
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
